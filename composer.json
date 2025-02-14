@@ -1,0 +1,28 @@
+{
+    "name": "smit-backend/kubernetes-canary-deployer",
+    "description": "Intelligent Canary deployment engine shifting traffic weights across Kubernetes ingress while monitoring live Prometheus error rates.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "smit-backend",
+            "email": "sync2sale@gmail.com",
+            "homepage": "https://github.com/smit-backend"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmitBackend\\KubeCanary\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SmitBackend\\KubeCanary\\PackageServiceProvider"
+            ]
+        }
+    }
+}
